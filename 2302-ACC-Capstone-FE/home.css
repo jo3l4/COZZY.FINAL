@@ -34,11 +34,15 @@
 .home-container {
     text-align: center;
   }
-  .home-container h1,
-  .home-container p {
+  .home-container h1 {
     font-family: 'Old English Text MT', Times, serif;
   }
-  
+  .home-container p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+  }
+
+
   /* Product window styles */
   .product-window {
     background-color: #fff;
@@ -51,6 +55,7 @@
   .product-window h2 {
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
   }
   
   .product-image {
@@ -69,6 +74,7 @@
   
   .product-details p {
     margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
   }
   
   .product-details button {
