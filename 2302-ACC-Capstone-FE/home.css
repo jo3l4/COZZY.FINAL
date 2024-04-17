@@ -29,6 +29,17 @@
     margin: 0 auto;
     padding: 20px;
   }
+
+  /* Center the text */
+.home-container {
+    text-align: center;
+  }
+  
+  /* Change the font to Old English */
+  .home-container h1,
+  .home-container p {
+    font-family: 'Old English Text MT', Times, serif;
+  }
   
   /* Product window styles */
   .product-window {
