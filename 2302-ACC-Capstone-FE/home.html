@@ -46,20 +46,21 @@
     <div class="product-details">
       <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <p id="price">Price: </p>
-      <button>Add to Cart</button>
-    </div>
+      <button onclick="addToCart()">Add to Cart</button>
   </div>
+</div>
 
+<script src="script.js"></script>
 
-
- 
- <script src="script.js"></script>
-
- <script>
+<script>
   document.getElementById("loginButton").addEventListener("click", function() {
-    window.location.href = "email.html";
+      window.location.href = "email.html";
   });
-</script>
 
+  function addToCart() {
+      // Add your logic to add the product to the cart
+      alert("Product added to cart!");
+  }
+</script>
 </body>
 </html>
