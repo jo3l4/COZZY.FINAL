@@ -30,12 +30,10 @@
     padding: 20px;
   }
 
-  /* Center the text */
+  /* home-container changes */
 .home-container {
     text-align: center;
   }
-  
-  /* Change the font to Old English */
   .home-container h1,
   .home-container p {
     font-family: 'Old English Text MT', Times, serif;
