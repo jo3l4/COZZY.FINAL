@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="home.css">
+    <script src="home.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="setPriceOnLoad()">
+    <form action="http://127.0.0.1:5500/COZZY.FINAL/2302-ACC-Capstone-FE/email.html">
+        <input type="submit" id="loginButton" value="Login" />
+    </form>
+          <div class="wrapper">
+            <div class="title-text">
+              <div class="title home">
+               
+              </div>
+            </div>
+            <div class="home-container">
+              <h1>The Cozy Exchange</h1>
+              <p>Vintage Clothing and Accessories</p>
+              <p>Buy.Sell.Trade!</p>
+            </div>
+          </div>
+       
+        
+        <form action="http://127.0.0.1:5500/cart.html">
+            <input type="submit" value="Cart" />
+        </form>
+      
+        <!-- Product window -->
+<div class="product-window">
+    <h2>Featured Product</h2>
+    <div class="product-image">
+      
+      <img src="https://assets.basspro.com/image/upload/c_limit,dpr_1.0,f_auto,h_948,q_auto,w_2000/c_limit,h_948,w_2000/v1/ProductImages/600/brown_84638_main?pgw=1" alt="Product Image" id="pants.1">
+
+      <img src="https://houghtonnyc.com/cdn/shop/products/Soulmates1-HP_Front_Jpeg_1024x1024.jpg?v=1555815188" alt="Product Image" id="jacket.1">
+  
+      <img src="https://media-photos.depop.com/b1/14580575/1759493930_022e9abc3872456db823ba135e13cfbd/P0.jpg" alt="Product Image" id="sweater.1" >
+
+    </div>  
+    
+    <div class="product-window">
+      <div class="product-image">
+
+        <img src="https://media-assets.grailed.com/prd/listing/46956585/eea120c1f82a4ad496723f062485066a?w=1000" alt="Product Image" id="tshirt.1">
+
+        <img src="https://cobblestore.com/cdn/shop/products/IMG_1777_3ab93662-5010-482f-9216-104de932d80b_1024x1024.jpg?v=1666383891" alt="Product Image" id="hat">
+  
+        <img src="https://i.ebayimg.com/images/g/-AgAAOSwOhNkfz8G/s-l1600.png" alt="Product Image" id="shirt.1" >
+   </div>  
+
+   <div class="product-window">
+    <div class="product-image">
+
+      <img src="https://img.gem.app/630474292/1f/1693393869/salem-sportswear-vintage-90s-texas-rangers-tee.jpg" alt="Product Image" id="tshirt.2">
+
+      <img src="https://www.vintagerareusa.com/cdn/shop/products/3_5e443418-9945-4fb2-8d80-00debb85b2b3.jpg?v=1667536414" alt="Product Image" id="tshirt.3">
+
+      <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTMH_AvMGALZCvmn-ueXmuA10Fd8LFdPbQoH4vubpsxQ9cuZo3Fju6tdfLX1QOslC_24uHcewGu6oRlcfV6NRJUDrzABjX2PFXjBjBbudtIiMJlEX0wp9n6&usqp=CAE" alt="Product Image" id="jacket.2" >
+   </div>  
+
+       
+
+
+    <div class="product-details">
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p id="price">Price: </p>
+      <button onclick="addToCart()">Add to Cart</button>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
