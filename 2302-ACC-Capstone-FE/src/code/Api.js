@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import auth from './Auth.js'
 
-const endpoint = 'http://localhost:3000/api/';
+const endpoint = 'https://cozzy-final.onrender.com/api/';
 
 function getEndpoint(relativePath) {
     return `${endpoint}${relativePath}`;
