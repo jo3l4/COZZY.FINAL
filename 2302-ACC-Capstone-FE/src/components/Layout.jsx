@@ -1,14 +1,29 @@
 import { Outlet, Link } from "react-router-dom";
 import '../style/layout.css'
+import auth from  '../code/Auth'
 
 const Layout = () => {
+    function handleLogout() {
+        auth.logout();
+    }
+
+    let authenticationButton;
+
+
+
+if (auth.isLoggedIn()) {
+    authenticationButton = <a className="btn" href="/" onClick={e => handleLogout()}>Logout</a>
+}
+else {
+    authenticationButton = <Link className="btn" to="/login">Login</Link>
+}
   return (
     <>
         <div className="header">
             <nav >
                 <ul className="links">
                     <li>
-                        <Link className="btn" to="/login">Login</Link>
+                        {authenticationButton}
                     </li>
                     <li>
                         <div className="wrapper">
@@ -20,7 +35,9 @@ const Layout = () => {
                         </div>
                     </li>
                     <li>
-                        <Link className="btn" to="/cart">Cart</Link>
+                        {auth.isLoggedIn() &&
+                            <Link className="btn" to="/cart">Cart</Link>
+                        }
                     </li>
                 </ul>
             </nav>

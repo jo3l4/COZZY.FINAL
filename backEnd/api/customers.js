@@ -72,7 +72,7 @@ customersRouter.post('/authenticate', async (request, response, next) => {
 });
 
 customersRouter.post('/register', async (req, res, next) => {
-  const { username, password, name, location } = req.body;
+  const { username, password, name, address } = req.body;
 
   try {
     const _customer = await getCustomerByUsername(username);

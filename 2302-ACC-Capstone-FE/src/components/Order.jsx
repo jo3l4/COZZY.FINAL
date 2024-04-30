@@ -37,13 +37,13 @@ const Order = () => {
                 <div>{orderItem.name}</div>
                 <div>Quantity: {orderItem.quantity}</div>
                 <div>Size: {orderItem.size}</div>
-                <div>Item Price: {orderItem.price}</div>
+                <div>Item Price: ${orderItem.price}</div>
               </li>
             )
           })}
         </ul>
         <div>Total Items: {order.totalItems}</div>
-        <div>Total Price: {order.totalPrice}</div>
+        <div>Total Price: ${order.totalPrice}</div>
       </div>
     </div>
   )

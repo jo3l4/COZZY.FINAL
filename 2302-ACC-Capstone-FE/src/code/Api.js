@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import auth from './Auth.js'
 
 const endpoint = 'https://cozzy-final.onrender.com/api/';
+//const endpoint = 'http://localhost:3000/api/';
 
 function getEndpoint(relativePath) {
     return `${endpoint}${relativePath}`;
@@ -46,6 +47,23 @@ const api = {
                 body: JSON.stringify({
                     username,
                     password
+                })
+            });
+        },
+        register(username, password, name, address) {
+            var headers = getHeaders();
+
+            return fetch(getEndpoint("customers/register"), {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Referer-Policy': 'origin'
+                },
+                body: JSON.stringify({
+                    username,
+                    password,
+                    name,
+                    address
                 })
             });
         }

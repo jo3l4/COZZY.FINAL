@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import '../style/cart.css'
 
 import api from '../code/Api.js'
+import auth from '../code/Auth.js'
 
 const Product = () => {
   var { productId } = useParams();
@@ -71,9 +72,11 @@ const Product = () => {
             <label>Quantity</label>
             <input type="number" min="1" value={quantity} onChange={e => setQuantity(e.target.value)}></input>
           </div>
+          { auth.isLoggedIn() &&
           <div className="actions-container">
             <input type="button" value="Add to Cart" onClick={handleAddToCart}/>
           </div>
+}
         </div>
         }
       </div>

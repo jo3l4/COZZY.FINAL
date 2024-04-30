@@ -25,7 +25,7 @@ const Cart = () => {
       const responseBody = await createOrderResponse.json();
       
       if (createOrderResponse.ok && responseBody?.order?.id) {
-        window.location.href = `orders/${responseBody.order.id}`;
+        window.location.href = `order/${responseBody.order.id}`;
       }
     };
     createOrderFromCart();
@@ -45,7 +45,7 @@ const Cart = () => {
                 <div>{cartItem.name}</div>
                 <div>Quantity: {cartItem.quantity}</div>
                 <div>Size: {cartItem.size}</div>
-                <div>Item Price: {cartItem.price}</div>
+                <div>Item Price: ${cartItem.price}</div>
               </li>
             )
           })}

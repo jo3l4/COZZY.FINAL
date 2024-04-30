@@ -106,12 +106,7 @@ async function getCustomerByUsername(username) {
       WHERE username=$1
     `, [ username ]);
 
-    if (!customer) {
-      throw {
-        name: "UserNotFoundError",
-        message: "A user with that username does not exist"
-      }
-    }
+
 
     return customer;
   } catch (error) {

@@ -26,10 +26,11 @@ const Login = () => {
   var [ username, setUsername ] = useState();
   var [ password, setPassword ] = useState();
   var [ passwordConfirmation, setPasswordConfirmation ] = useState();
+  var [ name, setName ] = useState();
+  var [ address, setAddress ] = useState();
 
   const handleLoginSubmit = (e) => {
     const login = async () => {
-      e.preventDefault();
 
       if (username && password) {
         var tokenResponse = await api.customers.authenticate(username, password);
@@ -38,11 +39,43 @@ const Login = () => {
         if (tokenResponse.ok && responseBody.token) {
           auth.setBearerToken(responseBody.token);
           window.location.href = "/";
+        } else {
+          alert('Error logging in');
         }
+      } else {
+        alert('username and password required');
+
+      }
+    }
+      e.preventDefault();
+      login();
+  }
+
+  
+  const handleRegisterSubmit = (e) => {
+    const register = async () => {
+
+      if (password != passwordConfirmation) {
+        alert('password and confirmation must match');
+      }
+
+      if (username && password) {
+        var tokenResponse = await api.customers.register(username, password, name, address);
+        var responseBody = await tokenResponse.json();
+
+        if (tokenResponse.ok && responseBody.token) {
+          auth.setBearerToken(responseBody.token);
+          window.location.href = "/";
+        } else {
+          alert('error registering user');
+        }
+      } else {
+        alert('username and password required');
       }
     }
 
-    login();
+    e.preventDefault();
+    register();
   }
 
   return (
@@ -84,7 +117,7 @@ const Login = () => {
                   Don't Have Account? <a href="">Create A New</a>
               </div>
             </form>
-            <form action="#" className="signup">
+            <form action="#" className="signup" onSubmit={handleRegisterSubmit} >
               <div className="field">
                   <input type="text" placeholder="Username" required
                    value={username} onChange={(event) => { setUsername(event.target.value); }}/>
@@ -96,6 +129,14 @@ const Login = () => {
               <div className="field">
                   <input type="password" placeholder="Confirm Password" required
                    value={passwordConfirmation} onChange={(event) => { setPasswordConfirmation(event.target.value); }}/>
+              </div>
+              <div className="field">
+                  <input type="text" placeholder="Name" required
+                   value={name} onChange={(event) => { setName(event.target.value); }}/>
+              </div>
+              <div className="field">
+                  <input type="text" placeholder="Address" required
+                   value={address} onChange={(event) => { setAddress(event.target.value); }}/>
               </div>
               <div className="field btn">
                   <div className="btn-layer"></div>

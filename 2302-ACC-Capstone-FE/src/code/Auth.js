@@ -6,6 +6,12 @@ const auth = {
     },
     setBearerToken(val) {
         localStorage.setItem('bearer-token', val);
+    },
+    isLoggedIn() {
+        return !!localStorage.getItem('bearer-token');
+    },
+    logout() {
+        localStorage.removeItem('bearer-token');
     }
 };
 
