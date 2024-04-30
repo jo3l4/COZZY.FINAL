@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="home.css">
+    <script src="home.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="setPriceOnLoad()">
+    <form action="/email.html">
+        <input type="submit" id="loginButton" value="Login" />
+    </form>
+          <div class="wrapper">
+            <div class="title-text">
+              <div class="title home">
+               
+              </div>
+            </div>
+            <div class="home-container">
+              <h1>The Cozy Exchange</h1>
+              <p>Vintage Clothing and Accessories</p>
+              <p>Buy.Sell.Trade!</p>
+            </div>
+          </div>
+       
+        
+        <form action="/cart.html">
+            <input type="submit" value="Cart" />
+        </form>
+      
+        <!-- Product window -->
+<div class="product-window">
+    <h2>Featured Product</h2>
+    <div class="product-image">
+
+      <img src="https://assets.basspro.com/image/upload/c_limit,dpr_1.0,f_auto,h_948,q_auto,w_2000/c_limit,h_948,w_2000/v1/ProductImages/600/brown_84638_main?pgw=1" alt="Product Image" id="pants.1">
+
+    </div>  
+    
+
+
+    <div class="product-details">
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p id="price">Price: {price}</p>
+      <button onclick="addToCart()">Add to Cart</button>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
