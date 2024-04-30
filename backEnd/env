@@ -1,0 +1,5 @@
+NODE_ENV=development
+PORT=3000
+POSTGRES_ENDPOINT=postgres://cozzydb_user:YbHSdEVNQJyeyrHxQSGFcUqGte1k0YwC@dpg-coluhvi0si5c73faalq0-a.oregon-postgres.render.com/cozzydb
+POSTGRES_SSL=true
+JWT_SECRET=bartholomew
