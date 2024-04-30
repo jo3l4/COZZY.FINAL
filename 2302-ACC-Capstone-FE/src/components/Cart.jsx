@@ -23,7 +23,7 @@ const Cart = () => {
     const createOrderFromCart = async () => {
       var createOrderResponse = await api.orders.create();
       const responseBody = await createOrderResponse.json();
-console.log('werewrwer',createOrderResponse,  responseBody);
+      
       if (createOrderResponse.ok && responseBody?.order?.id) {
         window.location.href = `orders/${responseBody.order.id}`;
       }

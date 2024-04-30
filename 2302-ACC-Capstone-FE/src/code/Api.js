@@ -36,12 +36,13 @@ const api = {
     customers: {
         authenticate(username, password) {
             var headers = getHeaders();
-            headers['Content-Type'] = 'application/json';
-            headers['Referer-Policy'] = 'origin';
 
             return fetch(getEndpoint("customers/authenticate"), {
                 method: 'POST',
-                headers: headers,
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Referer-Policy': 'origin'
+                },
                 body: JSON.stringify({
                     username,
                     password

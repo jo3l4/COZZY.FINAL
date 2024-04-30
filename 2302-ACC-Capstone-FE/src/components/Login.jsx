@@ -33,10 +33,10 @@ const Login = () => {
 
       if (username && password) {
         var tokenResponse = await api.customers.authenticate(username, password);
-        var tokenResponseObj = await tokenResponse.json();
+        var responseBody = await tokenResponse.json();
 
-        if (tokenResponseObj) {
-          auth.setBearerToken(tokenResponseObj.token);
+        if (tokenResponse.ok && responseBody.token) {
+          auth.setBearerToken(responseBody.token);
           window.location.href = "/";
         }
       }
