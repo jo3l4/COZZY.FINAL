@@ -4,7 +4,7 @@ const config = require('../config');
 
 const client = new Client({
   connectionString: config.postgresEndpoint,
-  ssl: config.postgresEndpointSsl,
+  ssl: { rejectUnauthorized : false },
 });
 
 /**
