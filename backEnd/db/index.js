@@ -4,7 +4,8 @@ const config = require('../config');
 
 const client = new Client({
   connectionString: config.postgresEndpoint,
-  ssl: { rejectUnauthorized : false },
+  ssl: { rejectUnauthorized : false }, // render deploy
+  //ssl: true // local / comment out for committing to git
 });
 
 /**
